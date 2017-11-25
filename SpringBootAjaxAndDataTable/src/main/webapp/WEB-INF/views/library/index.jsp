@@ -18,9 +18,9 @@
 		  </div>
 		  <p>This is a project where I working with jQuery DataTable and Handle ajax request.</p>  
 		  
-		   	<a href="/book/author/"><button type="button" class="btn btn-info float-right">Manage Book Author</button></a>
-		   	<a href="/library"><button type="button" class="btn btn-info float-right">Manage Book Language</button></a>
-		   	<a href="/library"><button type="button" class="btn btn-info float-right">Manage Book</button></a>
+		   	<a href="/book/author/"><button type="button" class="btn btn-info float-right">Client  Side DataTable With Ajax</button></a>
+		   	<a href="/library/author/serverSide/"><button type="button" class="btn btn-info float-right">DataTable Server side Operation</button></a>
+			<a href="/library/author/serverSidePagination/"><button type="button" class="btn btn-info float-right">DataTable Server side Pagination</button></a>
 		</div>
 		   
     

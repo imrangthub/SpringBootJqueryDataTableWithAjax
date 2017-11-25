@@ -14,7 +14,7 @@
 <body>
 	<div class="container">
 	  <div class="jumbotron">
-	    <h1>Welcome to Jquery DataTable Project</h1> 
+	    <h1>Welcome to Server side Operation</h1> 
 	  </div>
 	  <p>This is a project where I working with jQuery DataTable and Handle ajax request.</p>  
 	   <!-- Button trigger modal -->
@@ -24,37 +24,22 @@
 		 </button><br>
 		</div>
 		
-
-	  <div class="col-md-8 col-md-offset-2 well">
-	    <table class="table" id="bookAuthoreTable">
-		  <thead class="thead-default">
-		    <tr>
-		      <th>#</th>
-		      <th>Author Name</th>
-		      <th>Gender</th>
-		      <th>Country</th>
-		      <th>Action</th>
-		    </tr>
-		  </thead>
-		  <tbody>
-		   	<c:forEach items="${authors}" var="author">
-			  <tr>
-				<td><c:out value="${author.id}"/></td>
-				<td><c:out value="${author.name}"/></td>
-				<td><c:out value="${author.gender}"/></td>
-				<td><c:out value="${author.country}"/></td>
-				<td>
-				<a href=""  class="edit-reference" referenceId="${author.id }">Edit</a> | 
-				<a href="" class="delete-reference" referenceId="${author.id }">Delete</a>
-				</td>
-			  </tr>
-		    </c:forEach>
-		  </tbody>
-        </table>
-	  </div>
+		  <div class="col-sm-8 col-md-offset-2">
+		   <div class="form-group row">
+		      <div class="col-sm-4">
+	           <select name="gender" id="genderFilter" class="form-control" >
+	              <option selected value="ALL">All</option>
+				  <option value="MALE">Male</option>
+				  <option value="FEMALE">Female</option>
+				  <option value="OTHER">Other</option>
+				</select>
+	          </div>
+	       </div>
+		</div>
+		
 	  
 	    <div class="col-md-8 col-md-offset-2 well">
-	    <table class="table" id="myTable">
+	    <table class="table" id="serverSideTable">
 		  <thead class="thead-default">
 		    <tr>
 		      <th>#</th>
@@ -116,36 +101,13 @@
 <script type="text/javascript" src="/resources/javascripts/vendor/jquery/jquery.dataTables.js"></script>
 <script type="text/javascript" src="/resources/javascripts/vendor/bootstrap/bootstrap.min.js"></script>
 <script type="text/javascript" src="/resources/javascripts/vendor/bootstrap/bootstrap-growl.min.js"></script>
-<script type="text/javascript" src="/resources/javascripts/library/bookAuthor.js"></script>
+<script type="text/javascript" src="/resources/javascripts/library/bookAuthorServerside.js"></script>
 <script type="text/javascript" src="/resources/javascripts/application.js"></script>
 
 
 
 <script>
 $(document).ready(function(){
-	var authorData;
-	
-	  $('#myTable').on('click', 'a.editor_remove', function (e) {
-		  
-		     var selectRow = $(this).parents('tr');
-		        var confirmDel = confirm("Are you sure?");
-		        if (confirmDel == true) {
-		            var control = this;
-		         
-		            var referenceId = $(control).attr('referenceId');
-		            
-		            var tr = $(this).closest('tr');
-		            
-		            alert(JSON.stringify(tr));
-		            
-		            var id = tr.children('td:eq(0)').text(); //get the text from first col of current row
-		        }
-	          e.preventDefault();
-	    });
-	
-
-	
-	
 	
 });
 </script>
