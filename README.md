@@ -5,7 +5,7 @@ Implementation JQuery DataTable with ajax submit.
 
 Required SQL:
 
- CREATE TABLE `book_author` (
+       CREATE TABLE `book_author` (
 	  `id` bigint NOT NULL AUTO_INCREMENT,
 	  `country` varchar(255) DEFAULT NULL,
 	  `gender` varchar(255) DEFAULT NULL,
